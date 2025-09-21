@@ -4,6 +4,8 @@ repo_name: idmp-toolkit
 repo_url: https://git.cdplab.org/ericmonzon/idmp-toolkit
 
 theme: 
+  features:
+    - content.code.copy
   name: material
   favicon: assets/icon.svg
   icon:
