@@ -1,6 +1,6 @@
 # Contribute to **IDMPToolkit**
 
-Please follow our **branching** and **naming conventions** to keep the repository clean and maintainable.
+## Cloning the repository
 
 Begin by cloning the repository via:
 
@@ -35,6 +35,8 @@ poetry add <package-name>
 ## Branching Convention
 
 All work should be done in a **feature branch**, not directly on `main`. This ensures that `main` always remains stable and ready for release.
+
+Please follow the following convention to keep the repository clean and maintainable.
 
 ```bash
 # Branch naming convention:
