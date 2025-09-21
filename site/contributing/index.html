@@ -13,7 +13,7 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/icon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
@@ -123,7 +123,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -133,7 +133,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -418,6 +418,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#poetry-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Poetry Installation
@@ -436,19 +445,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#branching-convention" class="md-nav__link">
+  <a href="#branching" class="md-nav__link">
     <span class="md-ellipsis">
-      Branching Convention
+      Branching
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Branching Convention">
+    <nav class="md-nav" aria-label="Branching">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#branch-naming-convention" class="md-nav__link">
+  <a href="#creating-a-branch" class="md-nav__link">
     <span class="md-ellipsis">
-      Branch naming convention
+      Creating a Branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pushing-to-a-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushing to a Branch
     </span>
   </a>
   
@@ -460,20 +478,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-branch" class="md-nav__link">
+  <a href="#collaboration-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a Branch
+      Collaboration Principles
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pushing-to-a-branch" class="md-nav__link">
+  <a href="#module-organization" class="md-nav__link">
     <span class="md-ellipsis">
-      Pushing to a Branch
+      Module Organization
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Module Organization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-__init__py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example __init__.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplified-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplified Imports
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -500,66 +542,6 @@
   <a href="#docstrings" class="md-nav__link">
     <span class="md-ellipsis">
       Docstrings
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avoiding-branch-conflicts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avoiding Branch Conflicts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Avoiding Branch Conflicts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-role-of-__init__py" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Role of __init__.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Benefits
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-folder-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Folder Layout
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-__init__py" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example __init__.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simplified-imports" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simplified Imports
     </span>
   </a>
   
@@ -605,6 +587,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#poetry-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Poetry Installation
@@ -623,19 +614,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#branching-convention" class="md-nav__link">
+  <a href="#branching" class="md-nav__link">
     <span class="md-ellipsis">
-      Branching Convention
+      Branching
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Branching Convention">
+    <nav class="md-nav" aria-label="Branching">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#branch-naming-convention" class="md-nav__link">
+  <a href="#creating-a-branch" class="md-nav__link">
     <span class="md-ellipsis">
-      Branch naming convention
+      Creating a Branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pushing-to-a-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushing to a Branch
     </span>
   </a>
   
@@ -647,20 +647,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-branch" class="md-nav__link">
+  <a href="#collaboration-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a Branch
+      Collaboration Principles
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pushing-to-a-branch" class="md-nav__link">
+  <a href="#module-organization" class="md-nav__link">
     <span class="md-ellipsis">
-      Pushing to a Branch
+      Module Organization
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Module Organization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-__init__py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example __init__.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplified-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplified Imports
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -697,66 +721,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#avoiding-branch-conflicts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avoiding Branch Conflicts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Avoiding Branch Conflicts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-role-of-__init__py" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Role of __init__.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Benefits
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-folder-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Folder Layout
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-__init__py" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example __init__.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simplified-imports" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simplified Imports
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -774,7 +738,11 @@
 
 
 <h1 id="contribute-to-idmptoolkit">Contribute to <strong>IDMPToolkit</strong></h1>
-<p>Please follow our <strong>branching</strong> and <strong>naming conventions</strong> to keep the repository clean and maintainable.</p>
+<h2 id="environment-setup">Environment Setup</h2>
+<p>To get started, begin by cloning the repository via:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@git.cdplab.org:ericmonzon/idmp-toolkit.git
+</span></code></pre></div>
+<p>Once cloned, you may follow the steps in <a href="../getting_started/">Getting Started</a> to create your environment.</p>
 <hr />
 <h2 id="poetry-installation">Poetry Installation</h2>
 <p>We use <a href="https://python-poetry.org/"><strong>Poetry</strong></a> to manage dependencies and environments.  </p>
@@ -782,18 +750,18 @@
 <hr />
 <h2 id="dependency-management">Dependency Management</h2>
 <p>When developing functions that rely on dependencies that are <strong>not</strong> yet in <code>idmp-toolkit</code>, instead of performing an installation via <code>pip install &lt;package-name&gt;</code> or <code>conda install &lt;package-name&gt;</code>, please perform the installation as follows:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>&lt;package-name&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>&lt;package-name&gt;
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This command must be executed from the project root (the folder containing <code>pyproject.toml</code>). It will install the dependency into your environment and automatically list it as a dependency for <code>idmp-toolkit</code>, preventing dependency errors in future installations.</p>
 </div>
 <hr />
-<h2 id="branching-convention">Branching Convention</h2>
+<h2 id="branching">Branching</h2>
 <p>All work should be done in a <strong>feature branch</strong>, not directly on <code>main</code>. This ensures that <code>main</code> always remains stable and ready for release.</p>
-<h3 id="branch-naming-convention">Branch naming convention</h3>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Branch naming convention:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>feature/&lt;module&gt;-&lt;task&gt;-&lt;<span class="k">function</span>&gt;-&lt;contributor_name&gt;
+<p>Please follow the following convention to keep the repository clean and maintainable.</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Branch naming convention:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>feature/&lt;module&gt;-&lt;task&gt;-&lt;<span class="k">function</span>&gt;-&lt;contributor_name&gt;
 </span></code></pre></div>
 Examples:</p>
 <ul>
@@ -803,155 +771,170 @@ Examples:</p>
 <li><code>feature/data-split-haoda</code></li>
 </ul>
 <p>This format makes it easy to see what is being developed in each branch at a glance.</p>
-<hr />
-<h2 id="creating-a-branch">Creating a Branch</h2>
+<h3 id="creating-a-branch">Creating a Branch</h3>
 <p>Always start from the latest <code>main</code> branch:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Update local main</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Create a feature branch</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/&lt;task&gt;-&lt;<span class="k">function</span>&gt;-&lt;contributor-name&gt;
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/&lt;task&gt;-&lt;<span class="k">function</span>&gt;-&lt;contributor-name&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Update local main</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># Create a feature branch</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/&lt;task&gt;-&lt;<span class="k">function</span>&gt;-&lt;contributor-name&gt;
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/&lt;task&gt;-&lt;<span class="k">function</span>&gt;-&lt;contributor-name&gt;
+</span></code></pre></div>
+<h3 id="pushing-to-a-branch">Pushing to a Branch</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add rule-based tissue masking&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/preprocess-mask-&lt;contributor-name&gt;
 </span></code></pre></div>
 <hr />
-<h2 id="pushing-to-a-branch">Pushing to a Branch</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add rule-based tissue masking&quot;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/preprocess-mask-&lt;contributor-name&gt;
+<h2 id="collaboration-principles">Collaboration Principles</h2>
+<p>To keep development smooth and conflict-free, we follow these practices:</p>
+<ul>
+<li>
+<p><strong>Work only on feature branches</strong><br />
+  Nobody commits directly to <code>main</code>. Every change starts from a branch (see <a href="#branching-convention">Branching Convention</a>).</p>
+</li>
+<li>
+<p><strong>Respect ownership of functions</strong><br />
+  Contributors may work in the same file, but do not edit or overwrite someone else’s function without discussion.</p>
+</li>
+<li>
+<p><strong>Conflicts are expected, but manageable</strong><br />
+  Merge conflicts will happen when multiple people branch from the same point and edit the same file. As long as contributors work on separate functions, any conflicts will be line-based and trivial to resolve.</p>
+</li>
+<li>
+<p><strong>Small, modular changes</strong><br />
+  Keep pull requests focused. Small changes are easier to review and reduce the chance of large, messy conflicts.</p>
+</li>
+</ul>
+<hr />
+<h2 id="module-organization">Module Organization</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>idmp/
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── preprocess/
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>│   ├── __init__.py
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>│   ├── mask.py                 # Rule-based + model-based tissue masking
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>│   ├── iam.py                  # Image assessment methods (variation, quality, etc.)
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>│   ├── patch.py                # Sliding window and random patch sampling
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>│   └── wsi_constructor.py      # Reconstruct WSIs from patches + coordinates
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>│
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>├── visualization/
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>│   └── annotation_stats.py     # Number of slides/class, annotation counts, area stats
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>│
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>├── data/
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>│   ├── __init__.py
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>│   ├── split.py                # Dataset splitting (train/val/test)
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>│   └── qc.py                   # Quality control functions
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>│
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>└── models/                     # Model initialization scripts
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    ├── foundation.py           # Foundation models
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    ├── segmentation/           # Segmentation models
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    │   ├── glands.py           # Gland segmentation models
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    │   └── tissue.py           # Tissue segmentation models
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    └── classification/         # Classification models
 </span></code></pre></div>
+<p>To keep the function library clean and maintainable, instead of placing everything into a single large file like <code>preprocess.py</code>, we break down functionality by <strong>sub-tasks</strong>. Each sub-task lives in its own module (<code>mask.py</code>, <code>patch.py</code>, etc.), while the package <code>__init__.py</code> collects these into a stable public API.  </p>
+<p>This structure makes it easier to:</p>
+<ul>
+<li>
+<p><strong>Maintain</strong><br />
+  Smaller files are easier to read, test, and refactor.  </p>
+</li>
+<li>
+<p><strong>Collaborate</strong><br />
+  Less contributors working on the same file, minimizing conflicts.</p>
+</li>
+<li>
+<p><strong>Extend</strong><br />
+  New features can be added in a more organized manner, and it will be easier to find existing functions.</p>
+</li>
+<li>
+<p><strong>Expose a clean API</strong><br />
+  With <code>__init__.py</code> users can import functions seamlessly without worrying about internal layout. </p>
+</li>
+</ul>
+<h3 id="example-__init__py">Example <code>__init__.py</code></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># idmp/preprocess/__init__.py</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.iam</span><span class="w"> </span><span class="kn">import</span> <span class="n">match_histogram</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.wsi_constructor</span><span class="w"> </span><span class="kn">import</span> <span class="n">WSIConstructor</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.patch</span><span class="w"> </span><span class="kn">import</span> <span class="n">sliding_window</span><span class="p">,</span> <span class="n">random_patch</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">threshold_segmenter</span><span class="p">,</span> <span class="n">model_segmenter</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="s2">&quot;threshold_segmenter&quot;</span><span class="p">,</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="s2">&quot;model_segmenter&quot;</span><span class="p">,</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="s2">&quot;match_histogram&quot;</span><span class="p">,</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="s2">&quot;sliding_window&quot;</span><span class="p">,</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    <span class="s2">&quot;random_patch&quot;</span><span class="p">,</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="s2">&quot;WSIConstructor&quot;</span><span class="p">,</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="p">]</span>
+</span></code></pre></div>
+<h3 id="simplified-imports">Simplified Imports</h3>
+<p>Without <code>__init__.py</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">idmp.iam</span><span class="w"> </span><span class="kn">import</span> <span class="n">match_histogram</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">idmp.preprocess.patch</span><span class="w"> </span><span class="kn">import</span> <span class="n">sliding_window</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">idmp.preprocess.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">threshold_segmenter</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">idmp.preprocess.wsi_constructor</span><span class="w"> </span><span class="kn">import</span> <span class="n">WSIConstructor</span>
+</span></code></pre></div>
+<p>With <code>__init__.py</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">idmp.preprocess</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">match_histogram</span><span class="p">,</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">sliding_window</span><span class="p">,</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">threshold_segmenter</span><span class="p">,</span> 
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">WSIConstructor</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>Users only interact with a <strong>flat, stable API</strong>, while contributors can keep adding new files without bloating imports.</p>
 <hr />
 <h2 id="code-convention">Code Convention</h2>
 <h3 id="typing">Typing</h3>
 <p>Always use Python type hints for function signatures and class methods.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">threshold_segmenter</span><span class="p">(</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">slide</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">apply_morphological_closing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">ksize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="o">...</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">threshold_segmenter</span><span class="p">(</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">slide</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">apply_morphological_closing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">ksize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="o">...</span>
 </span></code></pre></div>
 <p>Specifying the expected input and return types makes functions easier to use and maintain, as future modifications only need to preserve these types to prevent errors.</p>
 <h3 id="docstrings">Docstrings</h3>
 <p>Document every function, and class using NumPy-style docstrings.
 Clear docstrings describe what a function does, explain its parameters and return values, and make the codebase easier to use and extend.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">threshold_segmenter</span><span class="p">(</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">slide</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">apply_morphological_closing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">ksize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="sd">    Segments tissue regions by thresholding the saturation channel </span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="sd">    with otsu.</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="sd">    Parameters</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="sd">    ----------</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="sd">    slide: np.ndarray</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="sd">        The image as a numpy array.</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="sd">        The image is assumed to be in RGB.</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="sd">    apply_morphological_closing: bool</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="sd">        Whether to close small gaps in the tissue</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="sd">    ksize: </span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="sd">        The kernel size for blurring and morphological closing.</span>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="sd">        Must be odd.</span>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="sd">    Returns</span>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="sd">    -------</span>
-</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="sd">    tissue_mask: np.ndarray</span>
-</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="sd">        The segmented tissue mask.</span>
-</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>
-</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>    <span class="o">...</span>
-</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>
-</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>    <span class="k">return</span> <span class="n">tissue_mask</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">threshold_segmenter</span><span class="p">(</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">slide</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="n">apply_morphological_closing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">ksize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="sd">    Segments tissue regions by thresholding the saturation channel </span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="sd">    with otsu.</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="sd">    Parameters</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="sd">    ----------</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="sd">    slide: np.ndarray</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="sd">        The image as a numpy array.</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="sd">        The image is assumed to be in RGB.</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="sd">    apply_morphological_closing: bool</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="sd">        Whether to close small gaps in the tissue</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="sd">    ksize: </span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="sd">        The kernel size for blurring and morphological closing.</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="sd">        Must be odd.</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="sd">    Returns</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="sd">    -------</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="sd">    tissue_mask: np.ndarray</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="sd">        The segmented tissue mask.</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>    <span class="o">...</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>    <span class="k">return</span> <span class="n">tissue_mask</span>
 </span></code></pre></div>
 <p>Please refer to this <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy"><strong>guide</strong></a> for more details.</p>
-<hr />
-<h2 id="avoiding-branch-conflicts">Avoiding Branch Conflicts</h2>
-<p>Our library is developed by multiple contributors, often working on similar tasks in different ways.  </p>
-<p>For example:  </p>
-<ul>
-<li><strong>Preprocess</strong></li>
-<li><code>mask</code>: rule-based and model-based tissue masking (LJ, XM, EM, HD)  </li>
-<li><code>iam</code>: image augmentation methods (XM, HD)  </li>
-<li><code>patch</code>: sliding window and random patching (XM, HD, ER, ZR)  </li>
-<li>
-<p><code>wsi_constructor</code>: reconstruct WSIs from patches (XM, ER, HD, ZR)  </p>
-</li>
-<li>
-<p><strong>Visualization</strong></p>
-</li>
-<li>
-<p><code>annotation_stats</code>: number of slides per class, annotations, and area stats (KH, JA, SY)  </p>
-</li>
-<li>
-<p><strong>Data</strong></p>
-</li>
-<li><code>split</code>: data splitting functions (EM, HD)  </li>
-<li>
-<p><code>qc</code>: quality control checks (LJ)  </p>
-</li>
-<li>
-<p><strong>Models</strong></p>
-</li>
-<li><code>foundation</code>, <code>segmentation</code>, <code>classification</code>  </li>
-</ul>
-<p>If everyone edited a single <code>preprocess.py</code> or <code>models.py</code> file, merge conflicts would happen frequently. The codebase would also become harder to maintain and refactor over time.</p>
-<h3 id="the-role-of-__init__py">The Role of <code>__init__.py</code></h3>
-<p>Instead of forcing everything into one large file, each group of functions lives in its own submodule (<code>mask.py</code>, <code>patch.py</code>, <code>split.py</code>, etc.).  </p>
-<p><code>__init__.py</code> then <strong>fuses these submodules into a clean public API</strong>.  </p>
-<h3 id="benefits">Benefits</h3>
-<ul>
-<li><strong>Conflict reduction</strong> – contributors work in separate files, avoiding merge conflicts.  </li>
-<li><strong>Stable API surface</strong> – users import from <code>idmp.preprocess</code> or <code>idmp.data</code> without worrying about internal file layout.  </li>
-<li><strong>Future flexibility</strong> – we can reorganize files as the library grows, while keeping the same import paths for users.  </li>
-<li><strong>Cleaner organization</strong> – related functionality is grouped into smaller, focused files.  </li>
-</ul>
-<h3 id="example-folder-layout">Example Folder Layout</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>idmp/
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├── preprocess/
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>│   ├── __init__.py
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>│   ├── mask.py
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   ├── iam.py
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>│   ├── patch.py
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>│   └── wsi_constructor.py
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>├── models/
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>│   ├── __init__.py
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>│   ├── foundation.py
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>│   └── segmentation.py
-</span></code></pre></div>
-<h3 id="example-__init__py">Example <code>__init__.py</code></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># idmp/preprocess/__init__.py</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.iam</span><span class="w"> </span><span class="kn">import</span> <span class="n">match_histogram</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.wsi_constructor</span><span class="w"> </span><span class="kn">import</span> <span class="n">reconstruct_wsi</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.patch</span><span class="w"> </span><span class="kn">import</span> <span class="n">sliding_window</span><span class="p">,</span> <span class="n">random_patch</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">threshold_segmenter</span><span class="p">,</span> <span class="n">model_segmenter</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="s2">&quot;threshold_segmenter&quot;</span><span class="p">,</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="s2">&quot;model_segmenter&quot;</span><span class="p">,</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="s2">&quot;match_histogram&quot;</span><span class="p">,</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="s2">&quot;sliding_window&quot;</span><span class="p">,</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="s2">&quot;random_patch&quot;</span><span class="p">,</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="s2">&quot;reconstruct_wsi&quot;</span><span class="p">,</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">]</span>
-</span></code></pre></div>
-<h3 id="simplified-imports">Simplified Imports</h3>
-<p>Without <code>__init__.py</code>:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">idmp.preprocess.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">rule_based_mask</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">idmp.preprocess.patch</span><span class="w"> </span><span class="kn">import</span> <span class="n">sliding_window</span>
-</span></code></pre></div>
-<p>With <code>__init__.py</code>:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">idmp.preprocess</span><span class="w"> </span><span class="kn">import</span> <span class="n">rule_based_mask</span><span class="p">,</span> <span class="n">sliding_window</span>
-</span></code></pre></div>
-<p>Users only interact with a <strong>flat, stable API</strong>, while contributors can keep adding new files without breaking imports.  </p>
-<hr />
-<p>This way, contributors can focus on their feature, while the library maintains a clean, conflict-resistant structure.</p>
 
 
 
@@ -981,11 +964,6 @@ Clear docstrings describe what a function does, explain its parameters and retur
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
@@ -1000,7 +978,7 @@ Clear docstrings describe what a function does, explain its parameters and retur
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
