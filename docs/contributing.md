@@ -71,6 +71,114 @@ git push -u origin feature/preprocess-mask-<contributor-name>
 
 ---
 
+## Collaboration Principles
+
+To keep development smooth and conflict-free, we follow these practices:
+
+- **Work only on feature branches**  
+  Nobody commits directly to `main`. Every change starts from a branch (see [Branching Convention](#branching-convention)).
+
+- **Respect ownership of functions**  
+  Contributors may work in the same file, but do not edit or overwrite someone else’s function without discussion.
+
+- **Conflicts are expected, but manageable**  
+  Merge conflicts will happen when multiple people branch from the same point and edit the same file. As long as contributors work on separate functions, any conflicts will be line-based and trivial to resolve.
+
+- **Small, modular changes**  
+  Keep pull requests focused. Small changes are easier to review and reduce the chance of large, messy conflicts.
+
+---
+
+## Module Organization
+
+```text
+idmp/
+├── preprocess/
+│   ├── __init__.py
+│   ├── mask.py                 # Rule-based + model-based tissue masking
+│   ├── iam.py                  # Image assessment methods (variation, quality, etc.)
+│   ├── patch.py                # Sliding window and random patch sampling
+│   └── wsi_constructor.py      # Reconstruct WSIs from patches + coordinates
+│
+├── visualization/
+│   └── annotation_stats.py     # Number of slides/class, annotation counts, area stats
+│
+├── data/
+│   ├── __init__.py
+│   ├── split.py                # Dataset splitting (train/val/test)
+│   └── qc.py                   # Quality control functions
+│
+└── models/                     # Model initialization scripts
+    ├── foundation.py           # Foundation models
+    ├── segmentation/           # Segmentation models
+    │   ├── glands.py           # Gland segmentation models
+    │   └── tissue.py           # Tissue segmentation models
+    └── classification/         # Classification models
+
+```
+
+To keep the function library clean and maintainable, instead of placing everything into a single large file like `preprocess.py`, we break down functionality by **sub-tasks**. Each sub-task lives in its own module (`mask.py`, `patch.py`, etc.), while the package `__init__.py` collects these into a stable public API.  
+
+This structure makes it easier to:
+
+- **Maintain**  
+  Smaller files are easier to read, test, and refactor.  
+
+- **Collaborate**  
+  Less contributors working on the same file, minimizing conflicts.
+
+- **Extend**  
+  New features can be added in a more organized manner, and it will be easier to find existing functions.
+
+- **Expose a clean API**  
+  With `__init__.py` users can import functions seamlessly without worrying about internal layout. 
+
+### Example `__init__.py`
+
+```python
+# idmp/preprocess/__init__.py
+
+from .iam import match_histogram
+from .wsi_constructor import WSIConstructor
+from .patch import sliding_window, random_patch
+from .mask import threshold_segmenter, model_segmenter
+
+__all__ = [
+    "threshold_segmenter",
+    "model_segmenter",
+    "match_histogram",
+    "sliding_window",
+    "random_patch",
+    "WSIConstructor",
+]
+```
+
+### Simplified Imports
+
+Without `__init__.py`:
+
+```python
+from idmp.iam import match_histogram
+from idmp.preprocess.patch import sliding_window
+from idmp.preprocess.mask import threshold_segmenter
+from idmp.preprocess.wsi_constructor import WSIConstructor
+```
+
+With `__init__.py`:
+
+```python
+from idmp.preprocess import (
+    match_histogram,
+    sliding_window,
+    threshold_segmenter, 
+    WSIConstructor
+)
+```
+
+Users only interact with a **flat, stable API**, while contributors can keep adding new files without bloating imports.
+
+---
+
 ## Code Convention
 
 ### Typing
@@ -128,98 +236,3 @@ def threshold_segmenter(
 ```
 
 Please refer to this [**guide**](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy) for more details.
-
----
-
-## Avoiding Branch Conflicts
-
-Our library is developed by multiple contributors, often working on similar tasks in different ways.  
-
-For example:  
-
-- **Preprocess**
-  - `mask`: rule-based and model-based tissue masking (LJ, XM, EM, HD)  
-  - `iam`: image augmentation methods (XM, HD)  
-  - `patch`: sliding window and random patching (XM, HD, ER, ZR)  
-  - `wsi_constructor`: reconstruct WSIs from patches (XM, ER, HD, ZR)  
-
-- **Visualization**
-  - `annotation_stats`: number of slides per class, annotations, and area stats (KH, JA, SY)  
-
-- **Data**
-  - `split`: data splitting functions (EM, HD)  
-  - `qc`: quality control checks (LJ)  
-
-- **Models**
-  - `foundation`, `segmentation`, `classification`  
-
-If everyone edited a single `preprocess.py` or `models.py` file, merge conflicts would happen frequently. The codebase would also become harder to maintain and refactor over time.
-
-### The Role of `__init__.py`
-
-Instead of forcing everything into one large file, each group of functions lives in its own submodule (`mask.py`, `patch.py`, `split.py`, etc.).  
-
-`__init__.py` then **fuses these submodules into a clean public API**.  
-
-### Benefits
-- **Conflict reduction** – contributors work in separate files, avoiding merge conflicts.  
-- **Stable API surface** – users import from `idmp.preprocess` or `idmp.data` without worrying about internal file layout.  
-- **Future flexibility** – we can reorganize files as the library grows, while keeping the same import paths for users.  
-- **Cleaner organization** – related functionality is grouped into smaller, focused files.  
-
-### Example Folder Layout
-
-```text
-idmp/
-├── preprocess/
-│   ├── __init__.py
-│   ├── mask.py
-│   ├── iam.py
-│   ├── patch.py
-│   └── wsi_constructor.py
-├── models/
-│   ├── __init__.py
-│   ├── foundation.py
-│   └── segmentation.py
-```
-
-### Example `__init__.py`
-
-```python
-# idmp/preprocess/__init__.py
-
-from .iam import match_histogram
-from .wsi_constructor import reconstruct_wsi
-from .patch import sliding_window, random_patch
-from .mask import threshold_segmenter, model_segmenter
-
-__all__ = [
-    "threshold_segmenter",
-    "model_segmenter",
-    "match_histogram",
-    "sliding_window",
-    "random_patch",
-    "reconstruct_wsi",
-]
-```
-
-### Simplified Imports
-
-Without `__init__.py`:
-
-```python
-from idmp.preprocess.mask import rule_based_mask
-from idmp.preprocess.patch import sliding_window
-```
-
-With `__init__.py`:
-
-```python
-from idmp.preprocess import rule_based_mask, sliding_window
-```
-
-Users only interact with a **flat, stable API**, while contributors can keep adding new files without breaking imports.  
-
----
-
-This way, contributors can focus on their feature, while the library maintains a clean, conflict-resistant structure.
