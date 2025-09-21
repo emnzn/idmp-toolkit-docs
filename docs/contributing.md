@@ -30,8 +30,6 @@ poetry add <package-name>
 
 All work should be done in a **feature branch**, not directly on `main`. This ensures that `main` always remains stable and ready for release.
 
-### Branch naming convention
-
 ```bash
 # Branch naming convention:
 feature/<module>-<task>-<function>-<contributor_name>
