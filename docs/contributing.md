@@ -34,7 +34,7 @@ poetry add <package-name>
 
 ---
 
-## Branching Convention
+## Branching
 
 All work should be done in a **feature branch**, not directly on `main`. This ensures that `main` always remains stable and ready for release.
 
@@ -53,9 +53,7 @@ Examples:
 
 This format makes it easy to see what is being developed in each branch at a glance.
 
----
-
-## Creating a Branch
+### Creating a Branch
 Always start from the latest `main` branch:
 
 ```bash
@@ -68,9 +66,7 @@ git checkout -b feature/<task>-<function>-<contributor-name>
 git push -u origin feature/<task>-<function>-<contributor-name>
 ```
 
----
-
-## Pushing to a Branch
+### Pushing to a Branch
 ```bash
 git add .
 git commit -m "Add rule-based tissue masking"
