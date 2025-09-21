@@ -1,8 +1,0 @@
-.logo-outline {
-  border: 2px solid var(--md-default-fg-color--lightest);
-  border-radius: 35px;
-}
-
-[data-md-color-scheme="slate"] .logo-outline {
-  border-color: var(--md-default-fg-color--lighter);
-}
