@@ -2,6 +2,12 @@
 
 Please follow our **branching** and **naming conventions** to keep the repository clean and maintainable.
 
+Begin by cloning the repository via:
+
+```bash
+git clone git@git.cdplab.org:ericmonzon/idmp-toolkit.git
+```
+
 ---
 
 ## Poetry Installation
