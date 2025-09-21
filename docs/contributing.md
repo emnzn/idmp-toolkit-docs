@@ -1,14 +1,16 @@
 # Contribute to **IDMPToolkit**
 
-## Cloning the repository
+## Environment Setup
 
-Begin by cloning the repository via:
+To get started, begin by cloning the repository via:
 
 ```bash
 git clone git@git.cdplab.org:ericmonzon/idmp-toolkit.git
 ```
 
----
+Once cloned, you may follow the steps in [Getting Started](getting_started.md) to create your environment.
+
+--- 
 
 ## Poetry Installation
 
