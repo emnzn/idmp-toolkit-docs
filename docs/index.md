@@ -26,7 +26,7 @@ hide:
 
     Step-by-step guides for patching, model usage, more.
 
-    [:octicons-arrow-right-24: View tutorials](tutorials/patching.md)
+    [:octicons-arrow-right-24: View tutorials](tutorials/index.md)
 
 -   :material-puzzle:{ .lg .middle } __Modules__
 
