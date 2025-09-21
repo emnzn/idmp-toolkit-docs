@@ -34,7 +34,7 @@ hide:
 
     API reference for preprocess, segmentation, annotations, embeddings, and more.
 
-    [:octicons-arrow-right-24: Explore modules](modules/preprocess.md)
+    [:octicons-arrow-right-24: Explore modules](modules/index.md)
 
 -   :simple-gitea:{ .lg .middle } __Contributing__
 

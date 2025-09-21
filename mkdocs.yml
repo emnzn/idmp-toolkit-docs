@@ -5,6 +5,7 @@ repo_url: https://git.cdplab.org/ericmonzon/idmp-toolkit
 
 theme: 
   name: material
+  favicon: assets/icon.svg
   icon:
     logo: simple/readthedocs
     repo: simple/gitea
@@ -61,3 +62,6 @@ nav:
   - "Modules":
     - "preprocess": modules/preprocess.md
   - "Contributing": "contributing.md"
+
+extra:
+  generator: false
