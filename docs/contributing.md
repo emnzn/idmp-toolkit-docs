@@ -42,7 +42,7 @@ Please follow the following convention to keep the repository clean and maintain
 
 ```bash
 # Branch naming convention:
-feature/<module>-<task>-<function>-<contributor_name>
+feature/<task>-<function>-<contributor_name>
 ```
 Examples:
 
